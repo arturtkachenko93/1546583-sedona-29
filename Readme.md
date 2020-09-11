@@ -1,6 +1,5 @@
 # Личный проект «Седона»
-
-* Студент: [Артур Ткаченко](https://up.htmlacademy.ru/htmlcss/29/user/1546583).
+* Студент: [Артур](https://up.htmlacademy.ru/htmlcss/29/user/1546583).
 * Наставник: [Анна Волкова](https://htmlacademy.ru/profile/id477715).
 
 ---
