@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="description" content="Сервис для поиска гостиницы в г.Седона, Аризона">
   <meta name="keywords" content="Отель в Седоне, гостинца в Седоне, отдых в Седоне">
-  <link rel="stylesheet" href="#">
   <title>Гостиница в Седона</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
@@ -16,59 +18,62 @@
     </a>
     <nav class="main-navigation">
       <ul class="site-navigation">
-        <li><a href="blank.html">информация</a></li>
-        <li><a href="blank.html">фото и видео</a></li>
-        <li><a href="blank.html">карта штата</a></li>
-        <li><a href="hotels.html">гостиницы</a></li>
+        <li class="nav-item"><a href="blank.html">информация</a></li>
+        <li class="nav-item"><a href="blank.html">фото и видео</a></li>
+        <li class="nav-item"><a href="blank.html">карта штата</a></li>
+        <li class="nav-item"><a href="hotels.html">гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
+
   <section class="features">
-    <h1 class="welcome-title">Cедона - небольшой городок в аризоне, заслуживающий большего!</h1>
-    <h2 class="visually-hidden">Преимущества</h2>
-    <p class="features-list-desc">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
-    <ul class="features-item">
-      <li class="real-town-item">
-        <h3 class="real-town-title">Настоящий городок</h3>
-        <p class="real-town-desc">- №1 - Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+    <div class="welcome-subject">
+      <h1 class="welcome-title">Cедона - небольшой городок в аризоне, заслуживающий большего!</h1>
+      <h2 hidden>Преимущества</h2>
+      <p class="features-list-five">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+  </div>
+    <ul class="features-list">
+      <li class="features-item-town">
+        <h3 class="real-title">Настоящий городок</h3>
+        <p class="real-title-desc">- №1 - Седона - не аттракцион для туристов, там течёт своя жизнь</p>
         <ul class="features-sublist">
-          <li class="real-town-sublist">
-            <h4 class="features-sub-house">Жилье</h4>
-            <p class="features-sublist-desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <li class="house-sublist">
+            <h4 class="sublist-title">Жилье</h4>
+            <p class="features-list-desc">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="real-town-sublist">
-            <h4 class="features-sub-food">Еда</h4>
-            <p class="features-sublist-desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <li class="food-sublist">
+            <h4 class="sublist-title">Еда</h4>
+            <p class="features-list-desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="real-town-sublist">
-            <h4 class="features-sub-souvenirs">Сувениры</h4>
-            <p class="features-sublist-desc">Не только китайского, но и местного производства!</p>
+          <li class="suvenirs-sublist">
+            <h4 class="sublist-title">Сувениры</h4>
+            <p class="features-list-desc">Не только китайского, но и местного производства!</p>
           </li>
         </ul>
       </li>
-      <li class="feature-bridge">
-        <h3 class="feature-bridge-title">Там есть Мост дьявола</h3>
-        <p class="feature-bridge-desc">- №2 -Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      <li class="features-item-bridge">
+        <h3 class="real-title">Там есть Мост дьявола</h3>
+        <p class="real-title-desc">- №2 -Да, по нему можно пройти! Если конечно вы осмелитесь</p>
       </li>
-      <li class="feature-area">
-        <h3 class="feature-area-title">Небольшая площадь</h3>
-        <p class="feature-area-desc">- №3 -Все достопримечательности находятся очень близко</p>
+      <li class="area-sublist">
+        <h3 class="sublist-title">Небольшая площадь</h3>
+        <p class="features-list-desc">- №3 -Все достопримечательности находятся очень близко</p>
       </li>
-      <li class="feature-road">
-        <h3 class="feature-road-title">Красивая дорога</h3>
-        <p class="feature-road-desc">- №4 -Ехать в седону из лас-вегаса совсем не скучно!</p>
+      <li class="road-sublist">
+        <h3 class="sublist-title">Красивая дорога</h3>
+        <p class="features-list-desc">- №4 -Ехать в седону из лас-вегаса совсем не скучно!</p>
       </li>
-      <li class="feature-few">
-        <h3 class="feature-few-title">Мало туристов</h3>
-        <p class="feature-few-desc">- №5 -Большинство едет в гранд каньон и толпится там</p>
+      <li class="tourists-sublist">
+        <h3 class="sublist-title">Мало туристов</h3>
+        <p class="features-list-desc">- №5 -Большинство едет в гранд каньон и толпится там</p>
       </li>
     </ul>
   </section>
 
   <section class="search-hotel">
-    <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+    <h2 hidden>Поиск гостиницы в Седоне</h2>
     <a class="interested-slogan" href="#">Заинтересовались?</a>
     <p class="interested-desc">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <!-- Здесь будет форма поиска -->
@@ -83,38 +88,38 @@
 
     <section class="contacts-container">
       <h2 class="visually-hidden">Контакты</h2>
-      <a class="hashtag-link" href="#">#visitSEDONA</a>
-      <a class="nmbr-tel" href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+      <a href="#">#visitSEDONA</a>
+      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
     </section>
 
     <section>
       <h2 class="visually-hidden">Давай дружить!</h2>
-      <ul class="social-list">
-        <li class="item-twitter">
+      <ul>
+        <li class="social-list">
           <a href="#">
             <span class="visually-hidden">Твиттер</span>
-            <img src="#" width="46" height="48" alt="Твиттер">
+            <img class="item-twitter" src="img/icons/twitter.svg" width="17" height="15" alt="Твиттер">
           </a>
         </li>
-        <li>
+        <li class="social-list item-facebook">
           <a href="#">
-            <span>Фейсбук</span>
-            <img src="#" width="46" height="48" alt="Фейсбук">
+            <span class="visually-hidden">Фейсбук</span>
+            <img src="img/icons/facebook.svg" width="12" height="22" alt="Фейсбук">
           </a>
         </li>
-        <li>
+        <li class="social-list item-youtube">
           <a href="#">
-            <span>Ютуб</span>
-            <img src="#" width="46" height="48" alt="Ютуб">
+            <span class="visually-hidden">Ютуб</span>
+            <img src="img/icons/youtube.svg" width="20" height="16" alt="Ютуб">
           </a>
         </li>
       </ul>
     </section>
 
-    <div>
+    <div class="logo-author">
       <p>WEBSITE BY</p>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.png" width="114" height="40" alt="Логотип разработки сайта">
+        <img src="img/logo-htmlacademy.svg" width="114" height="40" alt="Логотип разработки сайта">
       </a>
     </div>
 
