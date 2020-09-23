@@ -2,6 +2,8 @@
 
 :root {
   --basic-blue: #81B3D2;
+  --grayish-blue: #669EC0;
+  --dark-blue: #5496BD;
   --basic-saddleBrown: #766357;
   --basic-black: #000000;
   --basic-black-light: #00000030;
@@ -13,17 +15,15 @@
   /* --special: #663d15; Зачем он нужен и как ним пользоваться? */
 }
 
-[hidden] { display: none }
-
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* Global */
@@ -34,7 +34,7 @@
     padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
     font-weight: 700;
     color: var(--basic-white);
     text-transform: uppercase;
@@ -51,134 +51,153 @@
     height: auto;
   }
 
- /*  Navigation */
- .container {
-  background-color: blueviolet; /* Сделал временно чтобы выделить блок */
- }
+  /*  Navigation */
+  .container {
+    background-color: blueviolet; /* Сделал временно чтобы выделить блок */
+  }
 
   .main-navigation {
     background-color: var(--basic-white);
     list-style: none;
   }
 
-  .site-navigation a {
+  .site-navigation {
     color: var(--basic-black);
   }
 
   .site-navigation a:hover {
     color: var(--basic-blue);
   }
+  
   .site-navigation a:focus {
     color: var(--basic-black-light);
   }
 
   /* Main-features */
-  
-.welcome-subject {
-  
+
+  .welcome-title {
+    text-align: center;
+    font-size: 21px;
+    color: var(--basic-black);
 }
 
-.welcome-title {
-  text-align: center;
-  font-size: 21px;
-  color: var(--basic-black);
+  .features-list-five {
+    text-align: center;
+    font-weight: normal;
 }
 
-.features-list-five {
-  text-align: center;
-  font-weight: normal;
-}
+  .real-title {
+    font-size: 21px;
+    line-height: 21px;
+  }
 
-.real-title {
-  font-size: 21px;
-}
+  .features-list-desc {
+    font-weight: normal;
+    color: var(--basic-black);
+    line-height: 21px;
+  }
 
-.features-list-desc {
-  font-weight: normal;
-  color: var(--basic-black);
-}
+  .features-list {
+    list-style: none;
+  }
 
-.features-list {
-  list-style: none;
-}
+  .real-title-desc {
+    font-weight: normal;
+    line-height: 21px;
+  }
 
-.real-title {
-  font-size: 21px;
-}
+  .features-sublist {
+    /* list-style-type: none; */
+  }
 
-.real-title-desc {
-  font-weight: normal;
-}
+  .sublist-title {
+    font-size: 21px;
+    color: var(--basic-black);
+    line-height: 21px;
+  }
 
-.features-sublist {
-  list-style-type: none;
-}
+  .search-hotel {
+    text-align: center;
+  }
 
-.sublist-title {
-  font-size: 21px;
-  color: var(--basic-black);
-}
+  .interested-slogan {
+    font-size: 30px;
+    color: var(--basic-black);
+  }
 
-.search-hotel {
-  text-align: center;
-}
+  .search-hotel .interested-slogan:hover {
+    color: var(--basic-blue);
+  }
 
-.interested-slogan {
-  font-size: 30px;
-  color: var(--basic-black);
-}
+  .search-hotel .interested-slogan:focus {
+    color: var(--basic-black-light);
+  }
 
-.search-hotel a:hover {
-  color: var(--basic-blue);
-}
+  .interested-desc {
+    color: var(--basic-black);
+    font-weight: normal;
+    line-height: 24px;
+  }
 
-.search-hotel a:focus {
-  color: var(--basic-black-light);
-}
+  /* Footer */
 
-.interested-desc {
-  color: var(--basic-black);
-  font-weight: normal;
-}
+  footer {
+    background-color: var(--basic-saddleBrown);
+  }
 
-/* Footer */
+  .contacts-container a {
+    font-size: 21px;
+    color: var(--basic-black);
+  }
 
-footer {
-  background-color: var(--basic-saddleBrown);
-}
+  .contacts-container a:hover{
+    color: var(--basic-blue);
+  }
 
-.contacts-container {
-  font-size: 21px;
-  color: var(--basic-black);
-}
+  .contacts-container a:focus{
+    color: var(--basic-black-light);
+  }
 
-.social-list {
-  list-style-type: none;
-  display: inline-block;
-}
+  .social-list {
+    list-style: none;
+    display: inline-block;
+  }
 
-.social-list img{
-  width: 48px;
-  height: 48px;
-  margin: 5px;
-  background-color: var(--basic-blue);
-  background-position: 50% 50%;
-  background-size: auto;
-}
+  .social-list img {
+    background-color: var(--basic-blue);
+  }
 
-.item-twitter {
-  
-}
+  .item-twitter {
+    padding-left: 15px;
+    padding-top: 17px;
+    padding-right: 14px;
+    padding-bottom: 16px;
+  }
 
-.item-facebook {
+  .social-list img:hover {
+    color: var(--grayish-blue);
+  }
 
-}
+  .social-list img:focus {
+    color: var(--dark-blue);
+  }
 
-.item-youtube{
+  .item-fb {
+    padding: 17px 13px;
+  }
 
-}
-.logo-author p {
-  font-weight: normal;
-  text-transform: uppercase;
-  color: var(--basic-black);
-}
+  .item-youtube {
+    padding: 13px 16px;
+  }
+
+  .logo-author p {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--basic-black);
+  }
+
+  .logo-author:hover {
+    background-image: url(../img/icons/logo-htmlacademy-hover.svg);
+    background-repeat: no-repeat;
+    background-position: 0 40px;
+  }
