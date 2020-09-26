@@ -11,27 +11,31 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-body">
+<body class="page-body inner-page">
+
   <header class="main-header">
-    <a class="main-header-logo">
-      <img src="img/logo.svg" width="138" height="170" alt="Логотип сайта Sedona">
+
+    <a class="main-header-logo" href="index.html">
+      <img src="img/icons/logo.svg" width="138" height="170" alt="Логотип сайта Sedona">
     </a>
     <nav class="main-navigation">
       <ul class="site-navigation">
         <li class="nav-item"><a href="blank.html">информация</a></li>
         <li class="nav-item"><a href="blank.html">фото и видео</a></li>
         <li class="nav-item"><a href="blank.html">карта штата</a></li>
-        <li><span>гостиницы</span></li>
+        <li class="nav-item active"><a href="hotels.html">гостиницы</a></li>
       </ul>
     </nav>
+
   </header>
 
   <main class="container">
 
   <section class="features">
+    <p class="bg"></p>
     <div class="welcome-subject">
       <h1 class="welcome-title">Cедона - небольшой городок в аризоне, заслуживающий большего!</h1>
-      <h2 hidden>Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
       <p class="features-list-five">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
   </div>
     <ul class="features-list">
@@ -70,57 +74,57 @@
         <p class="features-list-desc">- №5 -Большинство едет в гранд каньон и толпится там</p>
       </li>
     </ul>
-  </section>
-
+    </section>
   <section class="search-hotel">
     <h2 hidden>Поиск гостиницы в Седоне</h2>
     <a class="interested-slogan" href="#">Заинтересовались?</a>
     <p class="interested-desc">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <!-- Здесь будет форма поиска -->
   </section>
+
 </main>
 
-  <footer class="page-footer">
+  <footer>
+
     <section class="map-route">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <img src="img/map.png" width="1199" height="594" alt="Карта машрута">
     </section>
-
-    <section class="contacts-container">
-      <h2 class="visually-hidden">Контакты</h2>
-      <a href="#">#visitSEDONA</a>
-      <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
-    </section>
-
-    <section>
-      <h2 class="visually-hidden">Давай дружить!</h2>
-      <ul>
-        <li class="social-list">
-          <a href="#">
-            <span class="visually-hidden">Твиттер</span>
-            <img class="item-twitter" src="img/icons/twitter.svg" width="17" height="15" alt="Твиттер">
-          </a>
-        </li>
-        <li class="social-list">
-          <a href="#">
-            <span class="visually-hidden">Фейсбук</span>
-            <img class="item-fb" src="img/icons/facebook.svg" width="12" height="22" alt="Фейсбук">
-          </a>
-        </li>
-        <li class="social-list">
-          <a href="#">
-            <span class="visually-hidden">Ютуб</span>
-            <img class="item-youtube" src="img/icons/youtube.svg" width="20" height="16" alt="Ютуб">
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <div class="logo-author">
-      <p>WEBSITE BY</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="/img/icons/logo-htmlacademy.svg" width="114" height="40" alt="Логотип разработки сайта">
-      </a>
+    <div class="footer-wrapper">
+      <section class="contacts-container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a href="#">#visitSEDONA</a>
+        <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
+      </section>
+      <section class="social-list">
+        <h2 class="visually-hidden">Давай дружить!</h2>
+        <ul>
+          <li>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Твиттер</span>
+              <img src="img/icons/twitter.svg" width="17" height="15" alt="Твиттер">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+              <img src="img/icons/facebook.svg" width="12" height="22" alt="Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <span class="visually-hidden">Ютуб</span>
+              <img src="img/icons/youtube.svg" width="20" height="16" alt="Ютуб">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="logo-author">
+        <p>WEBSITE BY</p>
+        <a class="logo-author-img" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="/img/icons/logo-htmlacademy.svg" width="114" height="40" alt="Логотип разработки сайта">
+        </a>
+      </div>
     </div>
 
   </footer>

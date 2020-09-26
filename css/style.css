@@ -12,6 +12,8 @@
   --basic-darkKhaki: #666666;
   --basic-red: #FF0000;
   --basic-snow: #F2F2F2;
+  --basic-silver-grey: #888888;
+  --basic-light-grey: #BDBBBC;
   /* --special: #663d15; Зачем он нужен и как ним пользоваться? */
 }
 
@@ -28,6 +30,10 @@
 
 /* Global */
 
+.page {
+  color: var(--basic-silver-grey);
+}
+
 .page-body {
     min-width: 1200px;
     margin: 0;
@@ -40,10 +46,12 @@
     text-transform: uppercase;
     background-position: top center;
     background-repeat: no-repeat;
+    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
+    transition: 0.8s;
   }
   
   img {
@@ -52,16 +60,21 @@
   }
 
   /*  Navigation */
+
   .container {
-    background-color: blueviolet; /* Сделал временно чтобы выделить блок */
+
   }
 
   .main-navigation {
     background-color: var(--basic-white);
-    list-style: none;
   }
 
   .site-navigation {
+    color: var(--basic-black);
+    list-style: none;
+  }
+
+  .site-navigation a {
     color: var(--basic-black);
   }
 
@@ -71,9 +84,21 @@
   
   .site-navigation a:focus {
     color: var(--basic-black-light);
+  } 
+  
+ .active a {
+    pointer-events: none;
+    color: var(--basic-saddleBrown);
   }
 
   /* Main-features */
+
+  .bg {
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
 
   .welcome-title {
     text-align: center;
@@ -97,17 +122,13 @@
     line-height: 21px;
   }
 
-  .features-list {
+  .features ul {
     list-style: none;
   }
 
   .real-title-desc {
     font-weight: normal;
     line-height: 21px;
-  }
-
-  .features-sublist {
-    /* list-style-type: none; */
   }
 
   .sublist-title {
@@ -139,10 +160,62 @@
     line-height: 24px;
   }
 
+  .features-item-town,
+  .features-item-bridge {
+    background-color: var(--basic-blue);
+  }
+
+  .area-sublist,
+  .road-sublist,
+  .tourists-sublist {
+    background-color: var(--basic-smoky-white);
+  }
+
+  /*  Hotels */
+
+  .catalog-hotels-desc {
+    color: var(--basic-black);
+    font-weight: 700px;
+  }
+
+  .catalog-sorting {
+    list-style: none;
+    color: var(--basic-black);
+  }
+
+  .catalog-sorting-item {
+    list-style: none;
+  }
+
+  .catalog-sorting-item a {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    list-style: none;
+    border-bottom: 2px dotted #81b3d2;
+    /* color: #000000;
+    opacity: 0.6; */
+  }
+
+  .catalog-sorting-list a:hover {
+    color: var(--basic-blue);
+  }
+
+  .catalog-sorting-list a:focus {
+    color: var(--basic-black);
+  }
+
+  .catalog-sorting-list.current a {
+    color: var(--basic-blue);
+    border: none;
+  }  
+
   /* Footer */
 
-  footer {
-    background-color: var(--basic-saddleBrown);
+  .footer-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .contacts-container a {
@@ -159,45 +232,54 @@
   }
 
   .social-list {
+    text-align: center;
+  }
+
+  .social-list ul {
     list-style: none;
-    display: inline-block;
+    display: flex;
+	  justify-content: center;
+  	align-items: center;
+    width: 400px;
+    box-sizing: border-box;
+    margin: 0;
+	  padding: 0;
   }
 
-  .social-list img {
+  .social-list a {
     background-color: var(--basic-blue);
+    width: 46px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    margin-right: 6px;
   }
 
-  .item-twitter {
-    padding-left: 15px;
-    padding-top: 17px;
-    padding-right: 14px;
-    padding-bottom: 16px;
+  .social-list a:hover {
+    background-color: var(--grayish-blue);
   }
 
-  .social-list img:hover {
-    color: var(--grayish-blue);
+  .social-list a:focus {
+    background-color: var(--dark-blue);
   }
 
-  .social-list img:focus {
-    color: var(--dark-blue);
+  .social-list a:active img {
+    opacity: 0.3;
   }
-
-  .item-fb {
-    padding: 17px 13px;
-  }
-
-  .item-youtube {
-    padding: 13px 16px;
-  }
-
+  
   .logo-author p {
-    font-weight: normal;
-    text-transform: uppercase;
     color: var(--basic-black);
+    font-style: normal;
+    font-weight: 400;
   }
 
-  .logo-author:hover {
-    background-image: url(../img/icons/logo-htmlacademy-hover.svg);
-    background-repeat: no-repeat;
-    background-position: 0 40px;
+  /* .button {
+    font: inherit;
+    text-align: center;
+    color: var(--basic-white);
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: var(--basic-black);
+    border: none;
   }
+   */
