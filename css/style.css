@@ -146,14 +146,6 @@
     color: var(--basic-black);
   }
 
-  .search-hotel .interested-slogan:hover {
-    color: var(--basic-blue);
-  }
-
-  .search-hotel .interested-slogan:focus {
-    color: var(--basic-black-light);
-  }
-
   .interested-desc {
     color: var(--basic-black);
     font-weight: normal;
@@ -175,7 +167,6 @@
 
   .catalog-hotels-desc {
     color: var(--basic-black);
-    font-weight: 700px;
   }
 
   .catalog-sorting {
@@ -190,10 +181,10 @@
   .catalog-sorting-item a {
     color: rgba(0, 0, 0, 0.3);
     font-size: 12px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 18px;
     list-style: none;
-    border-bottom: 2px dotted #81b3d2;
+    border-bottom: 2px dotted var(--basic-blue);
     /* color: #000000;
     opacity: 0.6; */
   }
@@ -270,7 +261,7 @@
   .logo-author p {
     color: var(--basic-black);
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
   }
 
   /* .button {
