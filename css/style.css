@@ -14,7 +14,7 @@
   --basic-snow: #F2F2F2;
   --basic-silver-grey: #888888;
   --basic-light-grey: #BDBBBC;
-  /* --special: #663d15; Зачем он нужен и как ним пользоваться? */
+  --basic-dull-grey: #666666;
 }
 
 .visually-hidden {
@@ -94,7 +94,7 @@
   /* Main-features */
 
   .bg {
-    background-image: url(../img/bg.jpg);
+    background-image: url("../img/bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -185,8 +185,6 @@
     line-height: 18px;
     list-style: none;
     border-bottom: 2px dotted var(--basic-blue);
-    /* color: #000000;
-    opacity: 0.6; */
   }
 
   .catalog-sorting-list a:hover {
@@ -201,6 +199,59 @@
     color: var(--basic-blue);
     border: none;
   }  
+
+  .hotel-title {
+    color: var(--basic-black);
+  }
+
+  .hotel-type {
+    font-weight: normal;
+    color: var(--basic-black);
+  }
+
+  .hotel-detailed {
+    display: block;
+    width: 110px;
+    height: 27px;
+    text-align: center;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+  }
+
+  .hotel-book {
+    display: block;
+    width: 142px;
+    height: 27px;
+    text-align: center;
+    color: var(--basic-white);
+    background-color: var(--basic-saddleBrown);
+  }
+
+  .rating-value {
+    display: block;
+    width: 110px;
+    height: 27px;
+    background-color: var(--basic-snow);
+    color: var(--basic-dull-grey);
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .rating-wrapper {
+    display: flex;
+    
+  }
+
+  .rating-star {
+    background-image: url(../img/icons/star.svg);
+    width: 19px;
+    height: 17px;
+    background-repeat: repeat-x;
+  }
+
+  .rating-star.fourth {
+    width: 90px;
+  }
 
   /* Footer */
 
@@ -264,13 +315,12 @@
     font-weight: normal;
   }
 
-  /* .button {
-    font: inherit;
-    text-align: center;
-    color: var(--basic-white);
-    vertical-align: middle;
-    text-transform: uppercase;
-    background-color: var(--basic-black);
-    border: none;
+  .logo-author a:hover path {
+    fill: var(--basic-blue);
+    transition: 0.8s;
   }
-   */
+
+  .logo-author a:focus path {
+    fill: var(--basic-light-grey);
+    transition: 0.8s;
+  }
