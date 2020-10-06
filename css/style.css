@@ -5,6 +5,7 @@
   --grayish-blue: #669EC0;
   --dark-blue: #5496BD;
   --basic-saddleBrown: #766357;
+  --basic-greyBrown: #604E43;
   --basic-black: #000000;
   --basic-black-light: #00000030;
   --basic-white: #ffffff;
@@ -14,7 +15,7 @@
   --basic-snow: #F2F2F2;
   --basic-silver-grey: #888888;
   --basic-light-grey: #BDBBBC;
-  /* --special: #663d15; Зачем он нужен и как ним пользоваться? */
+  --basic-dull-grey: #666666;
 }
 
 .visually-hidden {
@@ -38,6 +39,7 @@
     min-width: 1200px;
     margin: 0;
     padding: 0;
+    position: relative;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 26px;
@@ -61,15 +63,19 @@
 
   /*  Navigation */
 
-  .container {
-
+  .main-header {
+    display: flex;
+    width: 1200px;
+    height: 56px;
   }
 
   .main-navigation {
+
     background-color: var(--basic-white);
   }
 
   .site-navigation {
+    display: flex;
     color: var(--basic-black);
     list-style: none;
   }
@@ -82,7 +88,7 @@
     color: var(--basic-blue);
   }
   
-  .site-navigation a:focus {
+  .site-navigation a:active {
     color: var(--basic-black-light);
   } 
   
@@ -92,13 +98,24 @@
   }
 
   /* Main-features */
-
-  .bg {
-    background-image: url(../img/bg.jpg);
-    background-position: center;
-    background-size: cover;
+  
+  .bg-img {
+    background-image: url("../img/shape.png"), url("../img/bg.jpg");
+    background-position: bottom;
+    background-origin: content-box;
     background-repeat: no-repeat;
-    }
+    background-size: contain;
+    width: 1200px;
+    height: 509px;
+  }
+
+  /* .shape {
+    background-image: url("../img/shape.png");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 57px;
+    background-position: 0 0px;
+  } */
 
   .welcome-title {
     text-align: center;
@@ -185,22 +202,105 @@
     line-height: 18px;
     list-style: none;
     border-bottom: 2px dotted var(--basic-blue);
-    /* color: #000000;
-    opacity: 0.6; */
   }
 
   .catalog-sorting-list a:hover {
     color: var(--basic-blue);
   }
 
-  .catalog-sorting-list a:focus {
+  .catalog-sorting-list a:active {
     color: var(--basic-black);
+    border-bottom: none;
   }
 
   .catalog-sorting-list.current a {
     color: var(--basic-blue);
     border: none;
   }  
+
+  .hotel-title {
+    color: var(--basic-black);
+  }
+
+  .hotel-title-link:hover .hotel-title {
+    color: var(--basic-blue);
+  }
+
+  .hotel-title-link:active .hotel-title {
+    opacity: 0.3;;
+  }
+
+  .hotel-type {
+    font-weight: normal;
+    color: var(--basic-black);
+  }
+
+  .hotel-detailed {
+    display: block;
+    width: 110px;
+    height: 27px;
+    text-align: center;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+  }
+
+  .hotel-reserve {
+    display: block;
+    width: 142px;
+    height: 27px;
+    text-align: center;
+    color: var(--basic-white);
+    background-color: var(--basic-saddleBrown);
+  }
+  
+  .hotel-detailed:hover {
+    background-color: var(--grayish-blue);
+  }
+
+  .hotel-detailed:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hotel-reserve:hover {
+    background-color: var(--basic-greyBrown);
+  }
+
+  .hotel-reserve:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .rating-value {
+    display: block;
+    width: 110px;
+    height: 27px;
+    background-color: var(--basic-snow);
+    color: var(--basic-dull-grey);
+    font-weight: normal;
+    text-align: center;
+  }
+
+  .rating-wrapper {
+    display: flex;  
+  }
+
+  .rating-star {
+    background-image: url("../img/icons/star.png");
+    width: 18px;
+    height: 17px;
+    background-size: cover;
+  }
+
+  .rating-star.four {
+    width: 90px;
+  }
+
+  .rating-star.three {
+    width: 67px;
+  }
+
+  .rating-star.two {
+    width: 41px;
+  }
 
   /* Footer */
 
@@ -218,7 +318,7 @@
     color: var(--basic-blue);
   }
 
-  .contacts-container a:focus{
+  .contacts-container a:active{
     color: var(--basic-black-light);
   }
 
@@ -250,7 +350,7 @@
     background-color: var(--grayish-blue);
   }
 
-  .social-list a:focus {
+  .social-list a:active {
     background-color: var(--dark-blue);
   }
 
@@ -264,13 +364,12 @@
     font-weight: normal;
   }
 
-  /* .button {
-    font: inherit;
-    text-align: center;
-    color: var(--basic-white);
-    vertical-align: middle;
-    text-transform: uppercase;
-    background-color: var(--basic-black);
-    border: none;
+  .logo-author a:hover path {
+    fill: var(--basic-blue);
+    transition: 0.8s;
   }
-   */
+
+  .logo-author a:active path {
+    fill: var(--basic-light-grey);
+    transition: 0.8s;
+  }
