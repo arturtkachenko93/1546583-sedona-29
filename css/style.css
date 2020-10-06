@@ -99,7 +99,7 @@
   /* Main-features */
   
   .bg-img {
-    background-image: url("../img/Shape.png"), url("../img/bg.jpg");
+    background-image: url("../img/shape.png"), url("../img/bg.jpg");
     background-position: bottom;
     background-origin: content-box;
     background-repeat: no-repeat;
@@ -109,7 +109,7 @@
   }
 
   /* .shape {
-    background-image: url("../img/Shape.png");
+    background-image: url("../img/shape.png");
     background-repeat: no-repeat;
     width: 1200px;
     height: 57px;
@@ -209,6 +209,7 @@
 
   .catalog-sorting-list a:focus {
     color: var(--basic-black);
+    border-bottom: none;
   }
 
   .catalog-sorting-list.current a {
@@ -218,6 +219,14 @@
 
   .hotel-title {
     color: var(--basic-black);
+  }
+
+  .hotel-title-link:hover .hotel-title {
+    color: var(--basic-blue);
+  }
+
+  .hotel-title-link:focus .hotel-title {
+    opacity: 0.3;;
   }
 
   .hotel-type {
@@ -234,13 +243,21 @@
     background-color: var(--basic-blue);
   }
 
-  .hotel-book {
+  .hotel-reserve {
     display: block;
     width: 142px;
     height: 27px;
     text-align: center;
     color: var(--basic-white);
     background-color: var(--basic-saddleBrown);
+  }
+  
+  .hotel-detailed:focus {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hotel-reserve:focus {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .rating-value {
