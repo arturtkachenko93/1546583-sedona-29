@@ -88,7 +88,7 @@
     color: var(--basic-blue);
   }
   
-  .site-navigation a:focus {
+  .site-navigation a:active {
     color: var(--basic-black-light);
   } 
   
@@ -208,7 +208,7 @@
     color: var(--basic-blue);
   }
 
-  .catalog-sorting-list a:focus {
+  .catalog-sorting-list a:active {
     color: var(--basic-black);
     border-bottom: none;
   }
@@ -226,7 +226,7 @@
     color: var(--basic-blue);
   }
 
-  .hotel-title-link:focus .hotel-title {
+  .hotel-title-link:active .hotel-title {
     opacity: 0.3;;
   }
 
@@ -318,7 +318,7 @@
     color: var(--basic-blue);
   }
 
-  .contacts-container a:focus{
+  .contacts-container a:active{
     color: var(--basic-black-light);
   }
 
@@ -350,7 +350,7 @@
     background-color: var(--grayish-blue);
   }
 
-  .social-list a:focus {
+  .social-list a:active {
     background-color: var(--dark-blue);
   }
 
@@ -369,7 +369,7 @@
     transition: 0.8s;
   }
 
-  .logo-author a:focus path {
+  .logo-author a:active path {
     fill: var(--basic-light-grey);
     transition: 0.8s;
   }
