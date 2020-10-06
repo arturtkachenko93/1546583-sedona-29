@@ -5,6 +5,7 @@
   --grayish-blue: #669EC0;
   --dark-blue: #5496BD;
   --basic-saddleBrown: #766357;
+  --basic-greyBrown: #604E43;
   --basic-black: #000000;
   --basic-black-light: #00000030;
   --basic-white: #ffffff;
@@ -252,11 +253,19 @@
     background-color: var(--basic-saddleBrown);
   }
   
-  .hotel-detailed:focus {
+  .hotel-detailed:hover {
+    background-color: var(--grayish-blue);
+  }
+
+  .hotel-detailed:active {
     color: rgba(255, 255, 255, 0.3);
   }
 
-  .hotel-reserve:focus {
+  .hotel-reserve:hover {
+    background-color: var(--basic-greyBrown);
+  }
+
+  .hotel-reserve:active {
     color: rgba(255, 255, 255, 0.3);
   }
 
