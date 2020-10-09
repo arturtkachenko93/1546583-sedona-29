@@ -189,6 +189,9 @@
   .catalog-sorting {
     list-style: none;
     color: var(--basic-black);
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
   }
 
   .catalog-sorting-item {
@@ -343,7 +346,8 @@
     height: 48px;
     display: flex;
     justify-content: center;
-    margin-right: 6px;
+    align-items: center; /* Иконки по заданным размерам */
+    margin-right: 6px;   
   }
 
   .social-list a:hover {
