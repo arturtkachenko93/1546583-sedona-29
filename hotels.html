@@ -14,27 +14,27 @@
 
 <body class="page-body">
     <header class="main-header">
-        <a class="main-header-logo" href="index.html">
-            <img src="img/icons/logo.svg" width="138" height="170" alt="Логотип сайта Sedona">
-        </a>
-        <nav class="main-navigation">
-            <ul class="site-navigation">
-                <li class="nav-item"><a href="blank.html">информация</a></li>
-                <li class="nav-item"><a href="blank.html">фото и видео</a></li>
-                <li class="nav-item"><a href="blank.html">карта штата</a></li>
-                <li class="nav-item active"><a href="#">гостиницы</a></li>
-            </ul>
-        </nav>
+        <div class="main-navigation-wrapper">
+            <a class="main-header-logo" href="index.html">
+                <img src="img/icons/logo.svg" width="138" height="170" alt="Логотип сайта Sedona">
+            </a>
+            <nav class="main-navigation">
+                <ul class="site-navigation">
+                    <li class="nav-item"><a href="blank.html">информация</a></li>
+                    <li class="nav-item"><a href="blank.html">фото и видео</a></li>
+                    <li class="nav-item"><a href="blank.html">карта штата</a></li>
+                    <li class="nav-item active"><a href="#">гостиницы</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="page-catalog container">
         <section class="catalog-hotels">
             <h1 class="visually-hidden">Каталог отелей</h1>
             <!-- Здесь будет форма сортировки отелей -->
             <span class="catalog-hotels-desc">Найдено: 3</span>
-            <ul class="catalog-sorting">
-                <li>
-                    <p>Сортировка:</p>
+                    <span class="catalog-sorting">Сортировка:</span>
                 <ul class="catalog-sorting-item">
                     <li class="catalog-sorting-list current"><a href="#">по цене</a></li>
                     <li class="catalog-sorting-list"> <a href="#">по типу</a></li>
@@ -45,10 +45,10 @@
 
             <div class="arrow">
                 <a class="arrow-up" href="#">
-                    <img src="img/icons/arrow_up.png" width="11" height="10" alt="Arrow_up">
+                    <img src="img/icons/arrow_up.png" width="11" height="10" alt="">
                 </a>
                 <a class="arrow-down" href="#">
-                    <img src="img/icons/arrow_down.png" width="11" height="10" alt="Arrow_down">
+                    <img src="img/icons/arrow_down.png" width="11" height="10" alt="">
                 </a>
             </div>
 
@@ -58,7 +58,7 @@
                         <h2 class="hotel-title">Amara Resort & Spa</h2>
                     </a>
                         <p class="hotel-preview">
-                            <img src="img/preview/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
+                            <img src="img/preview/amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
                         </p>
                         <span class="hotel-type">Гостиница</span>
                         <span class="hotel-type">от 4000 р.</span>
@@ -77,7 +77,7 @@
                     </a>
                         <p class="hotel-preview">
                             <p>
-                                <img src="img/preview/dessert.jpg" width="135" height="90" alt="Desert Quail Inn">
+                                <img src="img/preview/dessert.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
                             </p>
                             <span class="hotel-type">Мотель</span>
                             <span class="hotel-type">от 3000 р.</span>
@@ -95,7 +95,7 @@
                         <h2 class="hotel-title">Villas at Poco Diablo</h2>
                     </a>
                         <p class="hotel-preview">
-                            <img src="img/preview/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+                            <img src="img/preview/villas.jpg" width="135" height="90" alt="Фото апартаментов Villas at Poco Diablo">
                         </p>
                         <span class="hotel-type">Апартаменты</span>
                         <span class="hotel-type">от 2000 р.</span>
@@ -113,7 +113,7 @@
     </main>
 
     <footer>
-        <div class="footer-wrapper">
+        <div class="footer-wrapper container">
             <section class="contacts-container">
                 <h2 class="visually-hidden">Контакты</h2>
                 <a href="#">#visitSEDONA</a>
@@ -125,19 +125,19 @@
                     <li>
                         <a class="social-button" href="#">
                             <span class="visually-hidden">Твиттер</span>
-                            <img src="img/icons/twitter.svg" width="17" height="15" alt="Твиттер">
+                            <img src="img/icons/twitter.svg" width="17" height="15" alt="Перейти на Твиттер">
                         </a>
                     </li>
                     <li>
                         <a class="social-button" href="#">
                             <span class="visually-hidden">Фейсбук</span>
-                            <img src="img/icons/facebook.svg" width="12" height="22" alt="Фейсбук">
+                            <img src="img/icons/facebook.svg" width="12" height="22" alt="Перейти на Фейсбук">
                         </a>
                     </li>
                     <li>
                         <a class="social-button" href="#">
                             <span class="visually-hidden">Ютуб</span>
-                            <img src="img/icons/youtube.svg" width="20" height="16" alt="Ютуб">
+                            <img src="img/icons/youtube.svg" width="20" height="16" alt="Перейти на Ютуб">
                         </a>
                     </li>
                 </ul>
