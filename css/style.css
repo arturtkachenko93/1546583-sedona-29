@@ -16,6 +16,7 @@
   --basic-silver-grey: #888888;
   --basic-light-grey: #BDBBBC;
   --basic-dull-grey: #666666;
+  --basic-white-100: #E5E5E5;
 }
 
 .visually-hidden {
@@ -48,7 +49,6 @@
   font-weight: 700;
   color: var(--basic-white);
   text-transform: uppercase;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 a {
@@ -64,7 +64,7 @@ img {
   /*  Navigation */
 
 .main-header {
-  background-color: #ffffff;
+  background-color: var(--basic-white);
 }
 
 .main-navigation-wrapper {
@@ -80,9 +80,7 @@ img {
 
 .main-header-logo {
   position: absolute;
-  display: inline-block;
   width: 138px;
-  height: 70px;
   top: 0;
   left: 0;
   right: 0;
@@ -142,7 +140,8 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 auto;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .bg-img {
@@ -157,7 +156,10 @@ img {
 }
 
 .welcome-subject {
-  padding: 40px 300px 30px;
+  display: grid;
+  margin: auto;
+  width: 519px;
+  /* margin-bottom: 51px; */
 }
 
 .welcome-title {
@@ -172,7 +174,6 @@ img {
   text-align: center;
   font-weight: normal;
   margin: 0;
-  padding-top: 47px;
 }
 
 .features-sublist-list p {
@@ -193,30 +194,25 @@ img {
 
 .features-sublist-list,
 .features-sublist-list-2 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.features-sublist-list li {
-  display: inline-block;
-  width: 397px;
   text-align: center;
 }
 
-.features-sublist-list-2 li {
-  display: inline-block;
-  width: 397px;
+.features-item-town,
+.features-item-bridge {
+  background-color: var(--basic-blue);
+  font-weight: normal;
+  line-height: 24px;
   text-align: center;
 }
 
 .real-title {
   font-size: 21px;
   line-height: 21px;
-}
-
-.features ul {
-  list-style: none;
 }
 
 .sublist-title {
@@ -232,19 +228,14 @@ img {
 .interested-slogan {
   font-size: 30px;
   color: var(--basic-black);
+  line-height: 24px;
 }
 
 .interested-desc {
   color: var(--basic-black);
   font-weight: normal;
   line-height: 24px;
-}
-
-.features-item-town,
-.features-item-bridge {
-  background-color: var(--basic-blue);
-  font-weight: normal;
-  line-height: 24px;
+  margin: 0;
 }
 
 .features-sublist {
@@ -261,31 +252,51 @@ img {
 }
 
 .search-hotel-wrapper {
-  display: inline-block;
   width: 435px;
-  margin-top: 58px;
-  margin-bottom: 78px;
+  margin: auto;
 }
 
 /*  Hotels */
 
+.catalog-hotels {
+  margin-top: 217px;
+}
+
+.catalog-sorting-wrapper {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr max-content;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-bottom: 30px;
+}
+
 .catalog-hotels-desc {
-  
+  color: var(--basic-black);
+  font-size: 21px;
 }
 
 .catalog-sorting {
+  display: grid;
+  align-items: center;
   color: var(--basic-black);
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
+  padding-left: 46px;
+  padding-right: 40px;
 }
 
 .catalog-sorting-item {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-gap: 33px;
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 28px;
-  margin-left: 11px;
+} 
+
+.arrow a:nth-child(1) {
+  padding-right: 12px
 }
 
 .catalog-sorting-item a {
@@ -311,8 +322,15 @@ img {
   border: none;
 }  
 
+.hotel-wrapper {
+  margin-left: 30px;
+}
+
+/* Не могу сделать, чтобы заголовок был к верху прижат и был на одной линии с превью-картинкой */
 .hotel-title {
   color: var(--basic-black);
+  margin: 0;
+  line-height: 26px;
 }
 
 .hotel-title-link:hover .hotel-title {
@@ -323,30 +341,39 @@ img {
   opacity: 0.3;;
 }
 
+.hotel-type-wrapper {
+  display: grid;
+  grid-template-columns: 110px max-content;
+  grid-gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
 .hotel-type {
-  display: inline-block;
   font-weight: normal;
   color: var(--basic-black);
-  margin-top: 7px;
-  padding-right: 35px;
+  line-height: 21px;
+}
+
+.button-wrapper {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-gap: 6px;
 }
 
 .hotel-detailed {
-  display: block;
+  display: grid;
   width: 110px;
   height: 27px;
-  margin-top: 13px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 
 .hotel-reserve {
-  display: block;
-  width: 142px;
+  display: grid;
+  width: 147px;
   height: 27px;
-  margin-left: 115px;
-  margin-top: -27px;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-saddleBrown);
@@ -369,13 +396,17 @@ img {
 }
 
 .rating-value {
-  display: block;
+  display: grid;
+  grid-column: 3 / 4;
   width: 110px;
   height: 27px;
   background-color: var(--basic-snow);
   color: var(--basic-dull-grey);
   font-weight: normal;
   text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: -40px;  /* Не получается по-другому разместить этот блок */
 }
 
 
@@ -384,8 +415,7 @@ img {
   width: 18px;
   height: 17px;
   background-size: cover;
-  margin-left: 543px;
-  margin-top: 17px;
+  margin-left: auto;
 }
 
 .rating-star.four {
@@ -407,16 +437,21 @@ img {
     justify-content: center;
   }
 
+  .contacts-container {
+    width: 251px;
+    text-align: center;
+  }
+
   .contacts-container a {
     font-size: 21px;
     color: var(--basic-black);
   }
 
-  .contacts-container a:hover{
+  .contacts-container a:hover {
     color: var(--basic-blue);
   }
 
-  .contacts-container a:active{
+  .contacts-container a:active {
     color: var(--basic-black-light);
   }
 
@@ -475,85 +510,19 @@ img {
 
   /* Hotels Grid */
   
-.catalog-hotels {
-  display: grid;
-  grid-template-rows: 86px 1fr;
-  align-content: start;
-  margin-top: 217px;
 
-}
-
-.catalog-sorting-wrapper {
-  display: grid;
-  grid-template-columns: max-content min-content 1fr  max-content;
-}
-
-.catalog-hotels-desc {
-  color: var(--basic-black);
-  font-size: 21px;
-  margin-left: 72px;
-  margin-top: 29px;
-}
-
-.catalog-sorting {
-  margin-left: 46px;
-  margin-top: 31px;
-}
-
-.catalog-sorting-item li{
-  padding-left: 32px;
-  display: inline-block;  
-}
-
-.arrow {
-  margin-top: 32px;
-  margin-right: 73px;
-}
-
-.arrow a {
-  padding-left: 8px;
-}
 
 .hotels-list {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.hotels-list li {
-  margin: 0;
+  grid-template-rows:  repeat(3, 1fr);
+  margin: 0 73px;
   padding: 0;
-  margin-bottom: 42px;
+
 }
 
 .hotel-item {
   display: grid;
-  grid-template-columns: max-content max-content max-content;
-
-}
-
-.hotel-item img {
-  margin-left: 33px;
-  margin-top: 18px;
-}
-
-.hotel-wrapper {
-  display: inline-block;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
-.rating-wrapper {
-  margin-left: 500px;
-  width: 100px;
-  padding-top: 50px;
-}
-
-.rating-value {
-  position: absolute;
-  margin-left: 980px;
-  margin-top: 80px;
-}
-
-.hotel-title {
-  margin: 0;
+  grid-template-columns: max-content max-content 1fr;
+  padding: 30px 0;
+  border-top: 1px solid var(--basic-white-100);
 }
