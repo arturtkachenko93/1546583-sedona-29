@@ -322,15 +322,28 @@ img {
   border: none;
 }  
 
+.hotels-list {
+  margin: 0;
+  padding: 0;
+
+}
+
+.hotel-item {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  padding: 30px 73px;
+  border-top: 1px solid var(--basic-white-100);
+}
+
+
 .hotel-wrapper {
   margin-left: 30px;
 }
 
-/* Не могу сделать, чтобы заголовок был к верху прижат и был на одной линии с превью-картинкой */
 .hotel-title {
   color: var(--basic-black);
   margin: 0;
-  line-height: 26px;
+  line-height: 14px;
 }
 
 .hotel-title-link:hover .hotel-title {
@@ -345,8 +358,7 @@ img {
   display: grid;
   grid-template-columns: 110px max-content;
   grid-gap: 6px;
-  margin-top: 8px;
-  margin-bottom: 15px;
+  margin-top: 13px;
 }
 
 .hotel-type {
@@ -359,6 +371,7 @@ img {
   display: grid;
   grid-template-columns: min-content min-content;
   grid-gap: 6px;
+  margin-top: 16px;
 }
 
 .hotel-detailed {
@@ -396,17 +409,15 @@ img {
 }
 
 .rating-value {
-  display: grid;
-  grid-column: 3 / 4;
+  display: flex;
   width: 110px;
   height: 27px;
   background-color: var(--basic-snow);
   color: var(--basic-dull-grey);
   font-weight: normal;
-  text-align: center;
   justify-content: center;
   margin-left: auto;
-  margin-top: -40px;  /* Не получается по-другому разместить этот блок */
+  margin-top: 46px;
 }
 
 
@@ -507,22 +518,3 @@ img {
     fill: var(--basic-light-grey);
     transition: 0.8s;
   }
-
-  /* Hotels Grid */
-  
-
-
-.hotels-list {
-  display: grid;
-  grid-template-rows:  repeat(3, 1fr);
-  margin: 0 73px;
-  padding: 0;
-
-}
-
-.hotel-item {
-  display: grid;
-  grid-template-columns: max-content max-content 1fr;
-  padding: 30px 0;
-  border-top: 1px solid var(--basic-white-100);
-}
