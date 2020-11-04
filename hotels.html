@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page-body">
     <header class="container">
         <a class="header-logo-link" href="index.html">
@@ -27,22 +29,83 @@
     <main class="container">
         <section class="catalog-hotels">
             <h1 class="visually-hidden">Каталог отелей</h1>
+            <h2 class="visually-hidden">Фильтр поиска отелей</h2>
             <div class="form-bg"></div>
-            <!-- Здесь будет форма сортировки отелей -->
+            <form class="filter" method="get" action="#">
+                <fieldset>
+                    <legend>Инфрастуктура:</legend>
+                    <ul>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="pool" id="pool" checked>
+                            <label for="pool">Бассейн</label>
+                        </li>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="parking" id="parking">
+                            <label for="parking">Парковка</label>
+                        </li>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                            <label for="wi-fi">wi-fi</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья:</legend>
+                    <ul>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="hotel" id="hotel"
+                                checked>
+                            <label for="hotel">Гостиница</label>
+                        </li>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="motel" id="motel"
+                                checked>
+                            <label for="motel">Мотель</label>
+                        </li>
+                        <li>
+                            <input class="visually-hidden input-checkbox" type="checkbox" name="apartaments"
+                                id="apartaments" checked>
+                            <label for="apartaments">Апартаменты</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Стоимость в сутки (р):</legend>
+                    <div class="price-controls">
+                        <label class="min-price">
+                            от <input type="number" name="min-price" value="0">
+                        </label>
+                        <label class="max-price">
+                            до <input type="number" name="max-price" value="3000">
+                        </label>
+                    </div>
+                    <div class="range-controls">
+                        <div class="scale"></div>
+                        <div class="bar"></div>
+                        <div class="toggle toggle-min" tabindex="0"></div>
+                        <div class="toggle toggle-max" tabindex="0"></div>
+                    </div>
+                    <button class="button-range-filter" type="submit">Показать</button>
+                </fieldset>
+            </form>
             <div class="catalog-sorting-wrapper">
                 <span class="catalog-hotels-desc">Найдено: 3</span>
                 <span class="catalog-sorting">Сортировка:</span>
                 <ul class="catalog-sorting-item">
-                    <li class="catalog-sorting-list current"><a href="#">по цене</a></li>
-                    <li class="catalog-sorting-list"><a href="#">по типу</a></li>
-                    <li class="catalog-sorting-list"><a href="#">по рейтингу</a></li>
+                    <li><a class="current" href="#">по цене</a></li>
+                    <li><a href="#">по типу</a></li>
+                    <li><a href="#">по рейтингу</a></li>
                 </ul>
-                <div class="arrow">
-                    <a href="#">
-                        <img src="img/icons/arrow_up.png" width="11" height="10" alt="">
+                <div class="arrow-wrapper">
+                    <a class="arrow" href="#">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+                        </svg>
                     </a>
-                    <a href="#">
-                        <img src="img/icons/arrow_down.png" width="11" height="10" alt="">
+                    <a class="arrow arrow-2" href="#">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10L0 0H11" fill="#CACACA" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -118,15 +181,16 @@
         </section>
     </main>
     <footer class="container">
-        <div class="footer-wrapper-index">
-            <section class="contacts-container">
-                <h2 class="visually-hidden">Контакты</h2>
+        <section class="footer-wrapper-page">
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <article class="contacts-container">
+                <h2 class="visually-hidden">Номер телефона и хештег</h2>
                 <a href="#">#visitSEDONA</a>
                 <a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a>
-            </section>
-            <section class="social-list">
-                <h2 class="visually-hidden">Давай дружить!</h2>
-                <ul>
+            </article>
+            <article class="social">
+                <h2 class="visually-hidden">Наши социальные сети</h2>
+                <ul class="social-list">
                     <li>
                         <a href="#">
                             <span class="visually-hidden">Твиттер</span>
@@ -146,8 +210,9 @@
                         </a>
                     </li>
                 </ul>
-            </section>
-            <div class="logo-author">
+            </article>
+            <article class="logo-author">
+                <h2 class="visually-hidden">Разработчик сайта</h2>
                 <p>WEBSITE BY</p>
                 <a href="https://htmlacademy.ru/intensive/htmlcss">
                     <svg width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,8 +222,8 @@
                             fill="#231F20" />
                     </svg>
                 </a>
-            </div>
-        </div>
+            </article>
+        </section>
     </footer>
 </body>
 </html>
