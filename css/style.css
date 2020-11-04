@@ -89,6 +89,7 @@
   font-weight: 700;
   color: var(--basic-white);
   text-transform: uppercase;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .page-body-hotels {
@@ -102,8 +103,16 @@ a {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding: 0;
   position: relative;
-  box-shadow: 0px 5px 15px 0px var(--basic-black-0-2);
+}
+
+.container-shadow {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  box-shadow: 0px 5px 15px var(--basic-black-0-2);
 }
 
   /*  Navigation */
@@ -424,25 +433,22 @@ a {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  width: 650px;
   padding: 0;
   margin: 0;
   margin-left: 40px;
 }
 
 .catalog-sorting-item li:nth-child(even) {
-  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .catalog-sorting-item li:nth-child(odd) {
-  margin-left: 33px;
-}
-
-.catalog-sorting-item li:first-of-type {
-  margin-left: 0;
+  margin-right: 33px;
 }
 
 .catalog-sorting-item a {
-  color: var(--basic-black-0-3);
+  color: var(--basic-black-0-3);2
   font-size: 12px;
   font-weight: normal;
   line-height: 32px;
@@ -502,7 +508,7 @@ a {
 }
 
 .hotels-list li:nth-last-child(1) {
-  border-bottom: none;
+  border-bottom: 1px solid var(--basic-white-100);
 } 
 
 .hotel-wrapper {
@@ -591,12 +597,14 @@ a {
 }
 
 .rating-value {
+  display: block;
   width: 110px;
-  height: 27px;
+  min-height: 27px;
   background-color: var(--basic-snow);
   color: var(--basic-dull-grey);
   font-weight: normal;
   text-align: center;
+  padding: 0 3px;
   margin-top: 47px;
 }
 
@@ -622,73 +630,79 @@ a {
 
   /* Footer */
 
-.footer-wrapper-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 120px;
-  padding-left: 115px;
-  padding-right: 138px;
-}
-
 .footer-wrapper-index {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
   min-height: 120px;
-  padding-left: 115px;
-  padding-right: 138px;
   background: var(--basic-white-0-9);
+  padding-left: 100px;
+  padding-right: 138px;
 }
 
-.contacts-container {
+.footer-wrapper-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  padding-left: 100px;
+  padding-right: 138px;
+}
+
+.contacts {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  text-align: center;
-  margin-left: 10px;
+  justify-content: center;
+  max-width: 275px;
+  margin-right: auto;
 }
 
-.contacts-container a {
+.contacts a {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
-  margin-bottom: 11px;
 }
 
-.contacts-container a:hover {
+.contacts a:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.contacts a:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+
+.contacts a:hover {
   color: var(--basic-blue);
 }
 
-.contacts-container a:active {
+.contacts a:active {
   color: var(--basic-black-light);
 }
 
-.contacts-container a:nth-last-of-type(2) {
-  margin-top: -7px;
-}
-
 .social {
-  width: 160px;
+  margin-right: 38px;
 }
 
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.social-list li {
+.social-list li:nth-child(1) {
   margin-right: 6px;
-  margin-bottom: 6px;
+}
+
+.social-list li:nth-child(2n) {
+  margin-right: 6px;
 }
 
 .social-list li:nth-child(3n) {
@@ -719,6 +733,8 @@ a {
 .logo-author {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .logo-author p {
@@ -763,6 +779,11 @@ a {
   cursor: pointer;
 }
 
+.hotels-search-form-close {
+  display: none;
+  animation: animation-form 0.8s;
+}
+
 .hotel-search-button:hover {
   background-color: var(--basic-greybrown);
 }
@@ -785,6 +806,7 @@ a {
   box-sizing: border-box;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px 0px var(--basic-black-0-15);
+  animation: animation-form 0.8s;
 }
 
 .hotels-search-time,
@@ -1180,4 +1202,16 @@ a {
   margin-top: 35px;
   margin-left: 85px;
   cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes animation-form {
+10% {
+  transform: translateY(10px);
+}
+
+100% {
+  transform: translateY(1px);
+  }
 }
