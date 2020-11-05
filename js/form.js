@@ -2,7 +2,7 @@ const formButton = document.querySelector(".hotel-search-button");
 const formPopup = document.querySelector(".hotels-search-form");
 const inputForm = document.querySelector("input");
 
-formButton.addEventListener ("click", function (evt) {
+formButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     formPopup.classList.toggle('hotels-search-form-close');
     formPopup.classList.toggle('hotels-search-form');
@@ -11,8 +11,8 @@ formButton.addEventListener ("click", function (evt) {
 
 formPopup.addEventListener("submit", function (evt) {
     if (!inputForm.value) {
-      evt.preventDefault();
+        evt.preventDefault();
     } else {
         localStorage.setItem(inputForm.value);
-      }
+    }
 });

@@ -561,21 +561,19 @@ a {
 }
 
 .hotel-detailed {
-  min-width: 110px;
-  min-height: 27px;
-  text-align: center;
-  line-height: 28px;
   color: var(--basic-white);
+  line-height: 28px;
   background-color: var(--basic-blue);
+  padding-left: 17px;
+  padding-right: 16px;
 }
 
 .hotel-reserve {
-  width: 142px;
-  height: 27px;
-  text-align: center;
-  line-height: 28px;
   color: var(--basic-white);
+  line-height: 28px;
   background-color: var(--basic-saddleBrown);
+  padding-left: 17px;
+  padding-right: 16px;
 }
 
 .hotel-detailed:hover {
@@ -602,15 +600,15 @@ a {
 }
 
 .rating-value {
-  display: block;
-  width: 110px;
-  min-height: 27px;
   background-color: var(--basic-snow);
   color: var(--basic-dull-grey);
   font-weight: normal;
-  text-align: center;
-  padding: 0 3px;
+  line-height: 21px;
   margin-top: 47px;
+  padding-left: 15px;
+  padding-right: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .rating-star {
@@ -1222,7 +1220,6 @@ a {
   background: var(--basic-white);
   color: var(--basic-black);
 }
-
 
 /* Animations */
 
