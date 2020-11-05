@@ -1182,7 +1182,7 @@ a {
   background-color: var(--basic-white);
 }
 
-.range-controls .toggle {
+.toggle {
   position: absolute;
   top: -9px;
   left: 0;
@@ -1194,6 +1194,11 @@ a {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--basic-white-400);
   cursor: pointer;
+}
+
+.toggle:hover {
+  top: -11px;
+  border: 10px solid var(--basic-white);
 }
 
 .range-controls .toggle-max {
@@ -1212,6 +1217,12 @@ a {
   margin-left: 85px;
   cursor: pointer;
 }
+
+.button-range-filter:hover {
+  background: var(--basic-white);
+  color: var(--basic-black);
+}
+
 
 /* Animations */
 
