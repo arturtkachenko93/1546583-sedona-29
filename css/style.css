@@ -206,7 +206,7 @@ a {
 .bg-img::before {
   content: "";
   background-image: url("../img/welcome.svg"),
-                    url("../img/the_gorgeous.svg"),
+                    url("../img/gorgeous.svg"),
                     url("../img/sedona.svg");
   background-repeat: no-repeat;
   background-size: auto;
@@ -1110,7 +1110,7 @@ a {
 .input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  background-image: url("../img/icons/checkbox_on.svg");
+  background-image: url("../img/icons/checkboxon.svg");
   width: 27px;
   height: 23px;
   top: 0;
