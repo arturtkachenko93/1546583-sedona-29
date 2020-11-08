@@ -57,6 +57,7 @@
   --basic-silver-grey: #888888;
   --basic-light-grey: #BDBBBC;
   --basic-dull-grey: #666666;
+  --basic-dull-grey-100: #6A6A6A;
 }
 
 .visually-hidden {
@@ -197,6 +198,7 @@ a {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: var(--dark-blue);
   width: 1200px;
   height: 509px;
   margin: 0 auto;
@@ -782,6 +784,10 @@ a {
   cursor: pointer;
 }
 
+.hotels-search {
+  position: relative;
+}
+
 .hotels-search-form-close {
   display: none;
   animation: animation-form 0.8s;
@@ -798,7 +804,6 @@ a {
 
 .hotels-search-form {
   position: absolute;
-	top: 2113px;
 	left: 0;
 	right: 0;
 	z-index: 1;
@@ -809,7 +814,7 @@ a {
   box-sizing: border-box;
   background-color: var(--basic-white);
   box-shadow: 0 7px 15px 0 var(--basic-black-0-15);
-  animation: animation-form 0.8s;
+  animation: animation-form 0.9s;
 }
 
 .hotels-search-time,
@@ -967,6 +972,7 @@ a {
   width: 38px;
   height: 38px;
   text-align: center;
+  -moz-appearance: textfield;
 }
 
 .hotels-search-field input[type=number]::-webkit-inner-spin-button,
@@ -1030,6 +1036,7 @@ a {
 
 .form-bg {
   background-image: url("../img/form-bg.jpg");
+  background-color: var(--dark-blue);
   position: absolute;
   width: 1200px;
   height: 217px;
@@ -1042,6 +1049,10 @@ a {
   padding-top: 26px;
   padding-left: 72px;
   padding-right: 73px;
+  padding-bottom: 26px;
+  height: 180px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .filter fieldset {
@@ -1107,18 +1118,22 @@ a {
   top: 0;
 }
 
-.input-checkbox:checked + label::after {
-  content: "";
-  position: absolute;
+.input-checkbox:checked + label::before {
   background-image: url("../img/icons/checkboxon.svg");
+  background-repeat: no-repeat;
   width: 27px;
   height: 23px;
-  top: 0;
-  left: -40px;
 }
 
 .input-checkbox:focus + label::before {
   outline: 2px solid var(--basic-black);
+}
+
+.input-checkbox:disabled + label::before {
+  background-image: url("../img/icons/checkboxdis.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;
 }
 
 .price-controls {
@@ -1153,6 +1168,7 @@ a {
   border: 0;
   font-family: inherit;
   font-size: inherit;
+  -moz-appearance: textfield;
 }
 
 .range-controls {
