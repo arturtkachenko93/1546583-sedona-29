@@ -32,66 +32,69 @@
             <section class="catalog-hotels">
                 <h1 class="visually-hidden">Каталог отелей</h1>
                 <h2 class="visually-hidden">Фильтр поиска отелей</h2>
-                <div class="form-bg"></div>
-                <form class="filter" method="get" action="#">
-                    <fieldset>
-                        <legend>Инфрастуктура:</legend>
-                        <ul>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="pool" id="pool"
-                                    checked>
-                                <label for="pool">Бассейн</label>
-                            </li>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="parking"
-                                    id="parking">
-                                <label for="parking">Парковка</label>
-                            </li>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
-                                <label for="wi-fi">wi-fi</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Тип жилья:</legend>
-                        <ul>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="hotel" id="hotel"
-                                    checked>
-                                <label for="hotel">Гостиница</label>
-                            </li>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="motel" id="motel"
-                                    checked>
-                                <label for="motel">Мотель</label>
-                            </li>
-                            <li>
-                                <input class="visually-hidden input-checkbox" type="checkbox" name="apartaments"
-                                    id="apartaments" checked>
-                                <label for="apartaments">Апартаменты</label>
-                            </li>
-                        </ul>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Стоимость в сутки (р):</legend>
-                        <div class="price-controls">
-                            <label class="min-price">
-                                от <input type="number" name="min-price" min="0" value="0">
-                            </label>
-                            <label class="max-price">
-                                до <input type="number" name="max-price" value="3000">
-                            </label>
-                        </div>
-                        <div class="range-controls">
-                            <div class="scale"></div>
-                            <div class="bar"></div>
-                            <div class="toggle toggle-min" tabindex="0"></div>
-                            <div class="toggle toggle-max" tabindex="0"></div>
-                        </div>
-                        <button class="button-range-filter" type="submit">Показать</button>
-                    </fieldset>
-                </form>
+                <div class="form-bg">
+                    <form class="filter" method="get" action="#">
+                        <fieldset>
+                            <legend>Инфрастуктура:</legend>
+                            <ul>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="pool" id="pool"
+                                        checked>
+                                    <label for="pool">Бассейн</label>
+                                </li>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="parking"
+                                        id="parking">
+                                    <label for="parking">Парковка</label>
+                                </li>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="wi-fi"
+                                        id="wi-fi">
+                                    <label for="wi-fi">wi-fi</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Тип жилья:</legend>
+                            <ul>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="hotel"
+                                        id="hotel" checked>
+                                    <label for="hotel">Гостиница</label>
+                                </li>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="motel"
+                                        id="motel" checked>
+                                    <label for="motel">Мотель</label>
+                                </li>
+                                <li>
+                                    <input class="visually-hidden input-checkbox" type="checkbox" name="apartaments"
+                                        id="apartaments" checked>
+                                    <label for="apartaments">Апартаменты</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="range-title">Стоимость в сутки (р):</legend>
+                            <div class="price-controls">
+                                <label class="min-price">
+                                    от <input type="number" name="min-price" min="0" value="0">
+                                </label>
+                                <label class="max-price">
+                                    до <input type="number" name="max-price" value="3000">
+                                </label>
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale"></div>
+                                <div class="bar"></div>
+                                <div class="toggle toggle-min" tabindex="0"></div>
+                                <div class="toggle toggle-max" tabindex="0"></div>
+                            </div>
+                            <button class="button-range-filter" type="submit">Показать</button>
+                        </fieldset>
+                    </form>
+                </div>
+
                 <div class="catalog-sorting-wrapper">
                     <span class="catalog-hotels-desc">Найдено: 3</span>
                     <span class="catalog-sorting">Сортировка:</span>
@@ -138,7 +141,7 @@
                             <div class="rating-star four">
                                 <span class="visually-hidden">4 Звезды</span>
                             </div>
-                            <span class="rating-value">Рейтинг: 8,9</span>
+                            <span class="rating-value">Рейтинг: 8,5</span>
                         </div>
                     </li>
                     <li class="hotel-item">
@@ -202,20 +205,20 @@
                     <h3 class="visually-hidden">Наши социальные сети</h3>
                     <ul class="social-list">
                         <li>
-                            <a href="#">
+                            <a class="social-link" href="#">
                                 <span class="visually-hidden">Твиттер</span>
                                 <img src="img/icons/twitter.svg" width="17" height="15" alt="Перейти на Твиттер">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="social-link" href="#">
                                 <span class="visually-hidden"></span>
                                 <img src="img/icons/facebook.svg" width="12" height="22"
                                     alt="Перейти на Фейсбук Фейсбук">
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a class="social-link" href="#">
                                 <span class="visually-hidden">Ютуб</span>
                                 <img src="img/icons/youtube.svg" width="20" height="16" alt="Перейти на Ютуб">
                             </a>
@@ -225,7 +228,7 @@
                 <article class="logo-author">
                     <h3 class="visually-hidden">Разработчик сайта</h3>
                     <p>WEBSITE BY</p>
-                    <a href="https://htmlacademy.ru/intensive/htmlcss">
+                    <a class="logo-author-link" href="https://htmlacademy.ru/intensive/htmlcss">
                         <svg width="115" height="41" viewBox="0 0 115 41" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <title>logo_name</title>
